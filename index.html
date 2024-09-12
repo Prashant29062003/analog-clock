@@ -22,10 +22,23 @@
         </div>
 
         <!-- Digital Clock -->
-        <div class="digital-time digital-screen">
-            <span id="digitalHour">23</span><span>:</span>
-            <span id="digitalMinute">23</span><span>:</span>
-            <span id="digitalSecond">23</span>
+
+        <div class="digital-clock">
+            <!-- UTC -->
+            <div class="digital-time digital-screen">
+                <span id="UTCorIST"></span>
+                <span id="digitalHour">23</span><span>:</span>
+                <span id="digitalMinute">23</span><span>:</span>
+                <span id="digitalSecond">23</span>
+            </div>
+
+            <!-- IST -->
+            <!-- <div class="digital-time digital-screen">
+                <span id="UTCorIST"></span>
+                <span id="digitalHour">23</span><span>:</span>
+                <span id="digitalMinute">23</span><span>:</span>
+                <span id="digitalSecond">23</span>
+            </div> -->
         </div>
 
         <!-- DATE -->
@@ -39,8 +52,9 @@
         <!-- chooseUTCIST -->
         <div id="optionsUTCIST">
             <select name="zone" id="zone">
-                <option value="true">IST</option>
-                <option value="false">UTC</option>
+                <option value="">choose zone</option>
+                <option value="true">IST -> UTC</option>
+                <option value="false">UTC -> IST</option>
             </select>
         </div>
     </div>

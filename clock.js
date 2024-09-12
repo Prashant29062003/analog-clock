@@ -58,14 +58,17 @@ function updateDigitalClock(){
 
 
     // Digital clock - IST
+    let UTCorIST = document.getElementById("UTCorIST");
     let digitalHour = document.getElementById("digitalHour");
     let digitalMinute = document.getElementById("digitalMinute");
     let digitalSecond = document.getElementById("digitalSecond");
 
+    let UTCorISTZone = (!ist) ? "UTC" : "IST";
     let hourTime = (!ist) ? utcHours : istHours;
     let minuteTime = (!ist) ? utcMinutes : istMinutes;
     let secondTime = (!ist) ? utcSeconds : istSeconds;
     
+    UTCorIST.innerHTML = `${UTCorISTZone}=== `;
     digitalHour.innerHTML = formatTime(hourTime);
     digitalMinute.innerHTML = formatTime(minuteTime);
     digitalSecond.innerHTML = formatTime(secondTime);

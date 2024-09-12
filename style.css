@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Protest+Guerrilla&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+
+  width: 100%;
+  background-color: whitesmoke;
+  color: #575757;
+  font-family: "Handjet", sans-serif;
+}
+
+#header h1{
+    font-family: "Protest Guerrilla", sans-serif;
+    background-color: #343434;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.clock-container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 44px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#optionsUTCIST{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#optionsUTCIST select{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#analogClock{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    background: url("img/pngwing.com.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#hour,
+#minute,
+#second{
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+    transition: transform 0.5 ease-in-out; /* Smooth transition for rotations */
+}
+#hour{
+    top: 25%;
+    left: 49.5%;
+    width: 1.8%;
+    height: 25%;
+    opacity: 0.8;
+}
+#minute{
+    top: 20%;
+    left: 49.6%;
+    width: 1.6%;
+    height: 30%;
+    opacity: 0.8;
+}
+#second{
+    top: 10%;
+    left: 49.9%;
+    width: 1%;
+    height: 40%;
+    opacity: 0.8;
+}
+
+.digital-screen{
+    background-color: #343434;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 20px;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 500;
+    border-radius: 10px;
+    animation: pulse 2s infinite; /* Pulsing border effect */
+}
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+.digital-screen span{
+    letter-spacing: 4px;
+    animation: fadeIn 0.5s ease-in; /* Apply fade-in animation */
+}
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.digital-screen .digital-time span:nth-child(even){
+    margin: 0 10px;
+}
+#differenceUTC-IST{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+
+@media screen and (max-width: 800px) {
+    #analogClock{
+        width: 17rem;
+        height: 17rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    #analogClock{
+        width: 15rem;
+        height: 15rem;
+    }
+}
+@media screen and (max-width: 270px) {
+    #analogClock{
+        width: 9rem;
+        height: 9rem;
+    }
+}

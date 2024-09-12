@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./clock.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <h1>Analog Clock</h1>
+    </div>
+
+    <!-- Analog Clock -->
+    <div class="clock-container">
+        <div id="analogClock">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div>
+
+        <!-- Digital Clock -->
+        <div class="digital-time digital-screen">
+            <span id="digitalHour">23</span><span>:</span>
+            <span id="digitalMinute">23</span><span>:</span>
+            <span id="digitalSecond">23</span>
+        </div>
+
+        <!-- DATE -->
+        <div class="digital-screen">
+            <span id="today-date"></span>
+        </div>
+
+        <!-- Difference (UTC - IST) -->
+        <div id="differenceUTC-IST" class="digital-screen"></div>
+
+        <!-- chooseUTCIST -->
+        <div id="optionsUTCIST">
+            <select name="zone" id="zone">
+                <option value="true">IST</option>
+                <option value="false">UTC</option>
+            </select>
+        </div>
+    </div>
+
+</body>
+</html>

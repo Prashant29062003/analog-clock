@@ -74,7 +74,7 @@ function updateDigitalClock(){
     digitalSecond.innerHTML = formatTime(secondTime);
 
     let differenceUTCIST = document.getElementById("differenceUTC-IST");
-    differenceUTCIST.innerHTML = `Difference (UTC - IST): 5 hours 30 minutes`
+    differenceUTCIST.innerHTML = `Difference (IST - UTC): 5 hours 30 minutes`
 }
 
 // Function to handle time zone change
